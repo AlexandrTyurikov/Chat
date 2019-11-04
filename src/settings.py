@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-INSTALLED_APPS = [
+DEFAULT_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +44,12 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
 ]
+
+MY_APPS = [
+    'chat_room',
+]
+
+INSTALLED_APPS = DEFAULT_APPS + MY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
